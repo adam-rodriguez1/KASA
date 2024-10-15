@@ -1,0 +1,212 @@
+.logement-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .main-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: flex-start;
+  }
+  .title-tags-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+
+    h1 {
+      color: #ff6060;
+      font-family: Montserrat;
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    .subtitle {
+      color: black;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: 500;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    .tags {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 25px;
+
+      .tag-item {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #ff6060;
+        border-radius: 15px;
+        color: white;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 700;
+
+        text-align: center;
+        padding: 4px 28px;
+        border: none;
+      }
+    }
+  }
+  .host-rating {
+    display: flex;
+    flex-direction: column;
+    .host-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 24px;
+
+      .host-name {
+        color: #ff6060;
+        margin-right: 15px;
+      }
+      .image-host {
+        border-radius: 50%;
+        height: 64px;
+        width: 64px;
+      }
+    }
+    .stars-rating {
+      margin-top: 15px;
+
+      .star {
+        margin: 5px;
+      }
+    }
+  }
+  .collapse-logement {
+    width: 90%;
+    display: flex;
+
+    gap: 55px;
+    .pour-paddingliste {
+      padding: 0;
+    }
+
+    .equipement-collapse {
+      list-style-type: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .logement-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .main-flex {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    .title-tags-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+      flex-direction: column;
+
+      h1 {
+        color: #ff6060;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      .subtitle {
+        color: black;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 30px;
+      }
+      .tags {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+
+        .tag-item {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          background-color: #ff6060;
+          border-radius: 15px;
+          color: white;
+          font-family: Montserrat;
+          font-size: 10px;
+          font-weight: 700;
+
+          text-align: center;
+          padding: 3px 22px;
+          border: none;
+        }
+      }
+    }
+    .host-rating {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      .host-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 24px;
+
+        .host-name {
+          color: #ff6060;
+          margin-right: 15px;
+          width: 90pxpx;
+          font-size: 12px;
+          margin-right: 9px;
+          width: 50px;
+          text-align: right;
+        }
+        .image-host {
+          border-radius: 50%;
+          height: 32px;
+          width: 32px;
+        }
+      }
+      .stars-rating {
+        margin-top: 15px;
+
+        .star {
+          margin: 5px;
+          height: 15px;
+          width: 15px;
+        }
+      }
+    }
+    .collapse-logement {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .collapse {
+        margin: 5px;
+        width: auto;
+      }
+      .pour-paddingliste {
+        padding: 0;
+      }
+
+      .equipement-collapse {
+        list-style-type: none;
+      }
+    }
+  }
+}

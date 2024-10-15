@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import './Collapse.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from "react";
+import "./Collapse.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const Collapse = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,14 +12,11 @@ const Collapse = ({ title, content }) => {
 
   return (
     <div className="collapse">
-      <div className="collapse-header" onClick={toggleCollapse}>
+      <div className="collapse-header">
         <span>{title}</span>
-        <FontAwesomeIcon 
-          icon={faChevronUp}
-          className={`chevron ${isOpen ? 'open' : ''}`}
-        />
+        <FontAwesomeIcon onClick={toggleCollapse} icon={faChevronUp} className={`chevron ${isOpen ? "open" : ""}`} />
       </div>
-      {isOpen && <div className="collapse-content">{content}</div>} 
+      {isOpen && <div className="collapse-content">{content}</div>}
     </div>
   );
 };

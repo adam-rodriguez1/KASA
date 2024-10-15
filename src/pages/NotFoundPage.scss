@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.quatrecentsquatre-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100%;
+
+  .quatrecentsquatre {
+    font-family: Montserrat;
+    font-size: 288px;
+    font-weight: 700;
+    color: #ff6060;
+    margin: 0;
+  }
+  .soustexte-quatrecentsquatre {
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 500;
+    color: #ff6060;
+  }
+  .quatrecentsquatre-link {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+  }
+}
+
+@media (max-width: 768px) {
+  .quatrecentsquatre-wrapper {
+    .quatrecentsquatre {
+      font-size: 96px;
+    }
+    .soustexte-quatrecentsquatre {
+      font-size: 18px;
+      text-align: center;
+    }
+    .quatrecentsquatre-link {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,14 +1,13 @@
-import React from 'react';
-  import Banner from '../components/Banner';
-import Liste from '../components/Liste';
+import React from "react";
+import Banner from "../components/Banner";
+import Liste from "../components/Liste";
 
 const Accueil = () => {
   return (
-      <div className='acceuils'>
-      <Banner />  
-      <Liste />;
-      </div>
-  
+    <div className="acceuils">
+      <Banner />   
+      <Liste />
+    </div>
   );
 };
 
