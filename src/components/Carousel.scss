@@ -38,6 +38,17 @@
       width: 100%;
       object-fit: cover;
       border-radius: 15px;
+      visibility: hidden;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.9s ease;
+      transform: scale(0.95);
+    }
+    .carousel-image.active {
+      visibility: visible;
+      position: relative;
+      opacity: 1;
+      transform: scale(1);
     }
   }
 }

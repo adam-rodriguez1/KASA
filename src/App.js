@@ -18,6 +18,7 @@ function App() {
           <Route path="/a-propos" element={<APropos />} />
           <Route path="/FicheLogement/:id" element={<FicheLogement />} />
           <Route path="*" element={<NotFoundPage />} />
+          <Route path="/NotFoundPage" element={<NotFoundPage />} />
         </Routes>
         </div>
         <Footer />

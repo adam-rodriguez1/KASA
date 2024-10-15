@@ -1,6 +1,6 @@
-import React from "react";
-//useParams est un "react hook" et permet de retourner depuis l'URL actuel sa valeur(il est possible de passer plusieurs valeurs)
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+//useParams
+import { useParams, useNavigate } from "react-router-dom";
 import output from "../data/output.json";
 import Carousel from "../components/Carousel.js";
 import "./FicheLogement.scss";
@@ -9,8 +9,18 @@ import Stars from "../components/StarsRating .js";
 
 const FicheLogement = () => {
   const { id } = useParams();
-
+  const navigate = useNavigate();
   const logement = output.find((logement) => logement.id === id);
+  console.log(logement);
+  useEffect(() => {
+    if (!logement) {
+      navigate("/NotFoundPage");
+    }
+  }, [logement, navigate]);
+  
+  if (!logement) {
+    return <div>...</div>;
+  }
 
   return (
     <div className="logement-body">

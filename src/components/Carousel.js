@@ -11,40 +11,46 @@ const Carousel = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   if (!logement) {
-    return <div>Logement non trouvé...</div>;
+    return <div>...</div>;
   }
+
+  const totalImages = logement.pictures.length;
+
+  const goToPrevious = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? totalImages - 1 : prevIndex - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex === totalImages - 1 ? 0 : prevIndex + 1));
+  };
 
   return (
     <div className="carousel">
       <div className="carousel-images">
-        {/* images *********************************************************************************************/}
         {logement.pictures.map((picture, index) => (
           <img
             key={index}
             src={picture}
             alt={`${logement.title} ${index + 1}`}
-            className="carousel-image"
-            style={{ display: currentImageIndex === index ? "block" : "none" }} // Afficher uniquement l'image actuelle
+            className={`carousel-image ${currentImageIndex === index ? "active" : ""}`}
           />
         ))}
-        {/*****************************************************************************************************/}
-        {/*Bouton gauche***************************************************************************************/}
-        {currentImageIndex > 0 && (
-          <button onClick={() => setCurrentImageIndex(currentImageIndex - 1)} className="arrow arrow-left">
-            <FontAwesomeIcon icon={faChevronLeft} />
-          </button>
+
+        {totalImages > 1 && (
+          <>
+            <button onClick={goToPrevious} className="arrow arrow-left">
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </button>
+
+            <button onClick={goToNext} className="arrow arrow-right">
+              <FontAwesomeIcon icon={faChevronRight} />
+            </button>
+          </>
         )}
-        {/**************************************************************************************************** */}
-        {currentImageIndex < logement.pictures.length - 1 && (
-          <button onClick={() => setCurrentImageIndex(currentImageIndex + 1)} className="arrow arrow-right">
-            <FontAwesomeIcon icon={faChevronRight} /> {/* Flèche droite */}
-          </button>
-        )}
-        {/* Compteur **************************************************************************************************************************/}
+
         <div className="counter">
-          {currentImageIndex + 1}/{logement.pictures.length}
+          {currentImageIndex + 1}/{totalImages}
         </div>
-        {/**************************************************************************************************************** */}
       </div>
     </div>
   );
