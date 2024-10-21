@@ -24,11 +24,26 @@
 
   .chevron.open {
     transform: rotate(-180deg);
+    
   }
 
   .collapse-content {
-    padding: 10px;
-    background-color: #f6f6f673;
-    
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0px;
+    background-color: #ffffff;
+    color:#f6f6f673 ;
   }
+
+  .collapse-content.open {
+    max-height: 1000px; 
+    padding: 10px;
+    color: black; 
+    background-color: #f6f6f673;
+  }
+  
+ 
 }
+
+

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-//useParams
 import { useParams, useNavigate } from "react-router-dom";
 import output from "../data/output.json";
 import Carousel from "../components/Carousel.js";
@@ -17,7 +16,7 @@ const FicheLogement = () => {
       navigate("/NotFoundPage");
     }
   }, [logement, navigate]);
-  
+
   if (!logement) {
     return <div>...</div>;
   }
