@@ -10,9 +10,11 @@ const Banner = ({
 }) => {
   return (
     <div className="accueil">
-      <div className={`banniere ${showOverlay ? "with-overlay" : ""}`}>
-        <img src={imageSrc} alt="bannierevoyage" className="image-banniere" />
-        {showText && <p className="text-banniere">{text}</p>}
+      <div
+        className={`banniere ${showOverlay ? "with-overlay" : ""}`}
+        style={{ backgroundImage: `url(${imageSrc})` }}
+      >
+        {showText && <p className="text-banniere">Chez vous,<br className="retour"></br> partout et ailleurs</p>}
       </div>
     </div>
   );
