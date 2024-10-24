@@ -5,17 +5,17 @@ import Carousel from "../components/Carousel.js";
 import "./FicheLogement.scss";
 import Collapse from "../components/Collapse";
 import Stars from "../components/StarsRating .js";
+import NotFoundPage from "./NotFoundPage.js";
 
 const Fichelogement = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
-  const logement = output.find((logement) => logement.id === id);
 
-  
+  const logement = output.find((logement) => logement.id === id);
 
 
   if (!logement) {
-    navigate("/NotFoundPage")
+    
+     return < NotFoundPage/>;
   }
 
   return (
